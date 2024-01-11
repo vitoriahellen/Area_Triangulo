@@ -8,14 +8,14 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // CHAMA A FUNÇÃO SCANNER PARA LER UM VALOR DIGITADO
 		
 		Triangulo x, y;
-		x = new Triangulo();
+		x = new Triangulo(); // CRIA UM NOVO OBJETO DO TIPO TRIANGULO
 		y = new Triangulo ();
 		
 
-		System.out.println("Digite as areas do triangulo X:");
+		System.out.println("Digite as areas do triangulo X:"); // PRINT DA DELA O COMANDO PARA DIGITAR OS VALORES
 		x.a = sc.nextDouble();
 		x.b = sc.nextDouble();
 		x.c = sc.nextDouble();
@@ -25,16 +25,15 @@ public class Program {
 		y.b = sc.nextDouble();
 		y.c = sc.nextDouble();
 		
-		double p = (x.a + x.b + x.c) / 2.0;
-		double areaX = Math.sqrt(p * (p-x.a) * (p-x.b) * (p-x.c));
+		double areaX = x.area(); // CHAMA O METODO AREA E COLOCA O RESULTADO NA VARIAVEL CRIADA
+		double areaY = y.area();
+
 		
-		p = (y.a + y.b + y.c) / 2.0;
-		double areaY = Math.sqrt(p * (p-y.a) * (p-y.b) * (p-y.c));
 		
-		System.out.printf("Area do triangulo X: %.4f%n", areaX);
+		System.out.printf("Area do triangulo X: %.4f%n", areaX); // PRINTA NA TELA O RESULTADO DA AREA
 		System.out.printf("Area do triangulo Y: %.4f%n", areaY);
 		
-		if (areaX > areaY) {
+		if (areaX > areaY) { // VERIFICA QUAL TRIANGULO É O MAIOR 
 			System.out.println("Maior area: X");
 		}
 		else {
